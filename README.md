@@ -2,16 +2,16 @@
 API for the dal schedule builder web app. Being used in my dal schedule builder which can be found at http://dalsb.stevc.com
 
 Use our public api at
-http://dalsb.stevc.com:8080/api/courses
+https://dalsb.stevc.com
 
 ## Usage
 Simply build and run the api.go and it will start the REST API.
-The API takes in 2 parameters, the subject code (i.e CSCI) and the term (1 = fall, 2 = winter).
+The API takes in 2 parameters, the subject code (i.e CSCI) and the term (1 = fall, 2 = winter, 3 = summer).
 
 dalschedulebuilder.com:8080/api/courses?s=`SUBJECT CODE`&t=`TERM`
 
 ## Example Response
-http://dalsb.stevc.com:8080/api/courses?s=CSCI&t=1
+https://dalsb.stevc.com:8080/api/courses?s=CSCI&t=1
 Returns all the CSCI courses for fall term.
 
 Some courses have been removed for simplicity sake.
