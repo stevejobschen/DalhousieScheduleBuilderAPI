@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	fmt.Printf("API has started running on port: 8080... \n")
+	fmt.Printf("API has started https running on port: 8080... \n")
 	http.HandleFunc("/api/courses", courses)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServeTLS(":8080", "cert.pem", "key.pem", nil)
 }
 
 func courses(w http.ResponseWriter, r *http.Request) {
@@ -24,3 +24,4 @@ func courses(w http.ResponseWriter, r *http.Request) {
 	term := r.URL.Query().Get("t")
 	fmt.Fprintf(w, string(db.Open(category, term)))
 }
+
